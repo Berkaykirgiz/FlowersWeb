@@ -1,0 +1,403 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff7f8">
+  <meta name="description" content="29 Ekim'e özel, kalpten kodlanmış bir çiçek buketi ve minik bir not.">
+  <title>Sana Açan Çiçekler ♡</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Telifli şarkı dosyasını kendin muzik.mp3 adıyla bu klasöre koy. -->
+  <audio id="backgroundMusic" src="muzik.mp3" preload="auto" loop playsinline></audio>
+
+  <button id="musicToggle" class="music-toggle" type="button" aria-label="Müziği başlat" aria-pressed="false">
+    <span class="music-toggle__symbol" aria-hidden="true">♫</span>
+    <span id="musicText">müziği aç ♡</span>
+  </button>
+
+  <div class="page-sparkle page-sparkle--one" aria-hidden="true">✳</div>
+  <div class="page-sparkle page-sparkle--two" aria-hidden="true">✧</div>
+  <div class="page-sparkle page-sparkle--three" aria-hidden="true">✳</div>
+
+  <main class="page">
+    <div class="date-tag">
+      <span class="date-tag__star">✦</span>
+      29 EKİM · Seviyorum Seni
+      <span class="date-tag__star">✦</span>
+    </div>
+
+    <header class="intro">
+      <h1>Bugün elimde çiçek yoktu,<br><em>ama aklımda hep sen vardın.</em></h1>
+      <p>O yüzden sana hiç solmayan, her açtığında yeniden çiçeklenen küçük bir buket yaptım.</p>
+    </header>
+
+    <section class="bouquet-area" aria-label="Açılan lale, şakayık ve lilyum çiçeklerinden oluşan buket">
+      <div class="bouquet-halo" aria-hidden="true"></div>
+      <div class="little-star little-star--a" aria-hidden="true">✦</div>
+      <div class="little-star little-star--b" aria-hidden="true">✧</div>
+      <div class="little-star little-star--c" aria-hidden="true">✳</div>
+
+      <svg class="bouquet" viewBox="0 0 700 580" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pembe laleler, şakayıklar ve beyaz lilyumlarla çizilmiş bir buket">
+
+        <defs>
+          <linearGradient id="rosePetal" x1="0" y1="0" x2="0.9" y2="1">
+            <stop offset="0" stop-color="#ffe3e9"/>
+            <stop offset=".48" stop-color="#f6aabd"/>
+            <stop offset="1" stop-color="#df7899"/>
+          </linearGradient>
+
+          <linearGradient id="roseDark" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#f9c4d1"/>
+            <stop offset="1" stop-color="#d8749a"/>
+          </linearGradient>
+
+          <linearGradient id="lightPink" x1="0" y1="0" x2=".9" y2="1">
+            <stop offset="0" stop-color="#fff3f2"/>
+            <stop offset=".64" stop-color="#ffd3db"/>
+            <stop offset="1" stop-color="#f6a0ba"/>
+          </linearGradient>
+
+          <linearGradient id="lilyWhite" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#fffefa"/>
+            <stop offset=".7" stop-color="#fff2ee"/>
+            <stop offset="1" stop-color="#f6c4d0"/>
+          </linearGradient>
+
+          <linearGradient id="leafGreen" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#bdd7ba"/>
+            <stop offset="1" stop-color="#83b19c"/>
+          </linearGradient>
+
+          <linearGradient id="paperBack" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#fff0ee"/>
+            <stop offset="1" stop-color="#f7ccd4"/>
+          </linearGradient>
+
+          <linearGradient id="paperFront" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ffe9e8"/>
+            <stop offset="1" stop-color="#edb8c8"/>
+          </linearGradient>
+
+          <filter id="tinyShadow" x="-40%" y="-40%" width="180%" height="180%">
+            <feDropShadow dx="0" dy="5" stdDeviation="4" flood-color="#cc8d9c" flood-opacity=".13"/>
+          </filter>
+
+          <!-- Yeni çiçeklerin tekrar kullanılabilir çizimleri -->
+          <g id="extraPeony">
+            <ellipse cx="-22" cy="-14" rx="24" ry="31" transform="rotate(-42 -22 -14)" fill="#f6b0c5" stroke="#db8faa" stroke-width="2"/>
+            <ellipse cx="22" cy="-14" rx="24" ry="31" transform="rotate(42 22 -14)" fill="#ef9eb8" stroke="#d88ca7" stroke-width="2"/>
+            <ellipse cx="0" cy="-28" rx="23" ry="32" fill="url(#lightPink)" stroke="#e5a1b5" stroke-width="2"/>
+            <ellipse cx="-24" cy="11" rx="24" ry="21" transform="rotate(-30 -24 11)" fill="#ffd3dc" stroke="#e7a5b8" stroke-width="2"/>
+            <ellipse cx="24" cy="11" rx="24" ry="21" transform="rotate(30 24 11)" fill="url(#rosePetal)" stroke="#dc91aa" stroke-width="2"/>
+            <path d="M-18 12 Q-22 -12 0 -15 Q22 -12 18 12 Q0 32 -18 12Z" fill="#ffe2e6" stroke="#e6a2b5" stroke-width="2"/>
+            <path d="M-11 7 Q0 -5 11 7 Q3 18 -7 12" fill="none" stroke="#d58aa5" stroke-width="2.5" stroke-linecap="round"/>
+            <circle cx="0" cy="9" r="4" fill="#f7cb85"/>
+          </g>
+
+          <g id="extraTulip">
+            <path d="M0 31 C-28 29 -34 -7 -19 -30 Q-3 -14 0 31Z" fill="#f0a3bc" stroke="#d58aa5" stroke-width="2"/>
+            <path d="M0 31 C28 29 34 -7 19 -30 Q3 -14 0 31Z" fill="#e99cb8" stroke="#d58aa5" stroke-width="2"/>
+            <path d="M0 31 C-21 8 -18 -23 0 -46 C19 -22 22 8 0 31Z" fill="url(#lightPink)" stroke="#dc91aa" stroke-width="2"/>
+            <path d="M0 22 Q-5 -7 0 -29" fill="none" stroke="#fff5f5" stroke-width="2.5" stroke-linecap="round"/>
+          </g>
+
+          <g id="extraLily">
+            <ellipse cx="0" cy="-26" rx="15" ry="32" fill="url(#lilyWhite)" stroke="#e7bdc9" stroke-width="2"/>
+            <ellipse cx="0" cy="-26" rx="15" ry="32" transform="rotate(60)" fill="#fff9f6" stroke="#e7bdc9" stroke-width="2"/>
+            <ellipse cx="0" cy="-26" rx="15" ry="32" transform="rotate(120)" fill="url(#lilyWhite)" stroke="#e7bdc9" stroke-width="2"/>
+            <ellipse cx="0" cy="-26" rx="15" ry="32" transform="rotate(180)" fill="#fff9f6" stroke="#e7bdc9" stroke-width="2"/>
+            <ellipse cx="0" cy="-26" rx="15" ry="32" transform="rotate(240)" fill="url(#lilyWhite)" stroke="#e7bdc9" stroke-width="2"/>
+            <ellipse cx="0" cy="-26" rx="15" ry="32" transform="rotate(300)" fill="#fff9f6" stroke="#e7bdc9" stroke-width="2"/>
+            <circle r="9" fill="#f9e9c2" stroke="#eacda4" stroke-width="2"/>
+            <path d="M0 0 L-11 -17 M0 0 L12 -19 M0 0 L21 3 M0 0 L-18 8" stroke="#bba278" stroke-width="2" stroke-linecap="round"/>
+            <g fill="#d9ac6a">
+              <circle cx="-11" cy="-19" r="4"/>
+              <circle cx="12" cy="-21" r="4"/>
+              <circle cx="23" cy="3" r="4"/>
+              <circle cx="-20" cy="9" r="4"/>
+            </g>
+          </g>
+        </defs>
+
+        <!-- Kâğıdın arkası -->
+        <g class="wrap-back">
+          <path d="M180 338 Q344 382 513 337 L460 506 Q355 540 249 501 Z" fill="url(#paperBack)" stroke="#eabcc7" stroke-width="2"/>
+          <path d="M180 338 Q230 376 280 392 L240 497 Z" fill="#fff4f0" opacity=".92"/>
+          <path d="M513 337 Q459 378 416 393 L460 506 Z" fill="#f5cfda" opacity=".83"/>
+          <path d="M180 338 Q345 393 513 337" fill="none" stroke="#e2aab8" stroke-width="2" stroke-dasharray="5 8" opacity=".7"/>
+        </g>
+
+        <!-- Saplar -->
+        <g class="stems" fill="none" stroke="#82a98e" stroke-width="6" stroke-linecap="round">
+          <path class="stem" style="--delay:.3s" d="M352 512 C312 423 221 348 169 269"/>
+          <path class="stem" style="--delay:.45s" d="M349 512 C335 392 305 298 313 201"/>
+          <path class="stem" style="--delay:.56s" d="M348 513 C383 407 453 314 493 206"/>
+          <path class="stem" style="--delay:.68s" d="M351 512 C389 385 414 258 419 153"/>
+          <path class="stem" style="--delay:.78s" d="M350 509 C308 377 264 268 252 139"/>
+          <path class="stem" style="--delay:.84s" d="M350 512 C289 408 186 336 117 214"/>
+          <path class="stem" style="--delay:.95s" d="M352 512 C405 420 510 347 562 301"/>
+
+          <!-- Yeni saplar -->
+          <path class="stem" style="--delay:.52s" d="M350 510 Q304 355 205 193"/>
+          <path class="stem" style="--delay:.61s" d="M350 510 Q324 355 355 110"/>
+          <path class="stem" style="--delay:.70s" d="M350 510 Q436 355 469 128"/>
+          <path class="stem" style="--delay:.79s" d="M350 510 Q436 355 578 185"/>
+          <path class="stem" style="--delay:.88s" d="M350 510 Q257 355 112 323"/>
+          <path class="stem" style="--delay:.97s" d="M350 510 Q260 355 227 323"/>
+          <path class="stem" style="--delay:1.06s" d="M350 510 Q422 355 442 309"/>
+          <path class="stem" style="--delay:1.15s" d="M350 510 Q434 355 575 367"/>
+          <path class="stem" style="--delay:1.24s" d="M350 510 Q371 355 340 317"/>
+          <path class="stem" style="--delay:1.33s" d="M350 510 Q192 355 91 193"/>
+        </g>
+
+        <!-- Yapraklar -->
+        <g class="leaves" fill="url(#leafGreen)" stroke="#7fab92" stroke-width="2" stroke-linejoin="round">
+          <path class="leaf" style="--delay:.8s" d="M246 383 C196 375 161 348 161 310 C205 315 237 347 246 383Z"/>
+          <path class="leaf" style="--delay:1s" d="M287 419 C251 385 247 345 260 307 C293 333 306 382 287 419Z"/>
+          <path class="leaf" style="--delay:1.12s" d="M333 424 C301 388 298 335 315 309 C345 342 350 391 333 424Z"/>
+          <path class="leaf" style="--delay:1.22s" d="M371 439 C369 397 405 349 455 339 C443 390 410 428 371 439Z"/>
+          <path class="leaf" style="--delay:1.33s" d="M400 374 C409 326 451 286 497 281 C488 332 447 367 400 374Z"/>
+          <path class="leaf" style="--delay:1.4s" d="M306 458 C255 437 205 436 167 453 C213 479 268 481 306 458Z"/>
+          <path class="leaf" style="--delay:1.46s" d="M394 457 C434 430 484 432 519 449 C481 471 427 475 394 457Z"/>
+          <path class="leaf" style="--delay:1.55s" d="M190 331 C150 322 129 293 126 266 C165 277 188 305 190 331Z"/>
+          <path class="leaf" style="--delay:1.57s" d="M446 334 C452 290 484 269 520 257 C511 296 486 323 446 334Z"/>
+
+          <!-- Yeni yapraklar -->
+          <path class="leaf" style="--delay:1.18s" d="M205 360 Q142 346 139 322 Q178 316 205 360Z"/>
+          <path class="leaf" style="--delay:1.37s" d="M257 352 Q232 318 247 277 Q278 301 257 352Z"/>
+          <path class="leaf" style="--delay:1.51s" d="M432 378 Q442 331 478 321 Q478 356 432 378Z"/>
+          <path class="leaf" style="--delay:1.61s" d="M475 405 Q507 359 542 364 Q536 395 475 405Z"/>
+          <path class="leaf" style="--delay:1.72s" d="M352 365 Q353 330 383 309 Q391 348 352 365Z"/>
+          <path class="leaf" style="--delay:1.44s" d="M282 345 Q279 308 294 283 Q312 319 282 345Z"/>
+        </g>
+
+        <g class="leaf-veins" fill="none" stroke="#eff8e7" stroke-width="2" stroke-linecap="round" opacity=".68">
+          <path d="M242 378 Q209 344 176 322 M289 410 Q278 360 263 329 M373 428 Q402 370 440 347 M398 367 Q443 314 483 291 M301 459 Q241 451 190 454 M398 458 Q454 448 499 449"/>
+        </g>
+
+        <!-- 10 yeni çiçek: orijinal çiçeklerin arka katmanı -->
+        <g class="extra-blossoms">
+          <g transform="translate(205 178)">
+            <g class="flower flower--extra-1" style="--delay:1.23s" filter="url(#tinyShadow)">
+              <use href="#extraPeony" transform="scale(.83)"/>
+            </g>
+          </g>
+
+          <g transform="translate(355 110)">
+            <g class="flower flower--extra-2" style="--delay:1.37s" filter="url(#tinyShadow)">
+              <use href="#extraTulip" transform="scale(.83)"/>
+            </g>
+          </g>
+
+          <g transform="translate(469 128)">
+            <g class="flower flower--extra-3" style="--delay:1.51s" filter="url(#tinyShadow)">
+              <use href="#extraPeony" transform="scale(.72)"/>
+            </g>
+          </g>
+
+          <g transform="translate(578 185)">
+            <g class="flower flower--extra-4" style="--delay:1.65s" filter="url(#tinyShadow)">
+              <use href="#extraLily" transform="scale(.79)"/>
+            </g>
+          </g>
+
+          <g transform="translate(112 323)">
+            <g class="flower flower--extra-5" style="--delay:1.79s" filter="url(#tinyShadow)">
+              <use href="#extraPeony" transform="scale(.72)"/>
+            </g>
+          </g>
+
+          <g transform="translate(227 323)">
+            <g class="flower flower--extra-6" style="--delay:1.93s" filter="url(#tinyShadow)">
+              <use href="#extraTulip" transform="scale(.77)"/>
+            </g>
+          </g>
+
+          <g transform="translate(442 309)">
+            <g class="flower flower--extra-7" style="--delay:2.07s" filter="url(#tinyShadow)">
+              <use href="#extraPeony" transform="scale(.76)"/>
+            </g>
+          </g>
+
+          <g transform="translate(575 367)">
+            <g class="flower flower--extra-8" style="--delay:2.21s" filter="url(#tinyShadow)">
+              <use href="#extraLily" transform="scale(.68)"/>
+            </g>
+          </g>
+
+          <g transform="translate(340 317)">
+            <g class="flower flower--extra-9" style="--delay:2.35s" filter="url(#tinyShadow)">
+              <use href="#extraPeony" transform="scale(.69)"/>
+            </g>
+          </g>
+
+          <g transform="translate(91 193)">
+            <g class="flower flower--extra-10" style="--delay:2.49s" filter="url(#tinyShadow)">
+              <use href="#extraTulip" transform="scale(.72)"/>
+            </g>
+          </g>
+        </g>
+
+        <!-- Sol pembe lale -->
+        <g class="flower flower--tulip-left" style="--delay:1.05s" filter="url(#tinyShadow)">
+          <path d="M170 302 C138 303 118 266 139 228 Q161 239 170 302Z" fill="#e991ad" stroke="#ce7f9b" stroke-width="2"/>
+          <path d="M170 302 C202 303 222 265 199 226 Q182 245 170 302Z" fill="#ee9cb6" stroke="#ce7f9b" stroke-width="2"/>
+          <path d="M170 301 C141 278 146 236 171 207 C195 234 202 280 170 301Z" fill="url(#lightPink)" stroke="#dd8fac" stroke-width="2"/>
+          <path d="M170 292 Q160 255 171 224" fill="none" stroke="#fff1f1" stroke-width="3" opacity=".78" stroke-linecap="round"/>
+        </g>
+
+        <!-- Sol üst şakayık -->
+        <g class="flower flower--peony-top" style="--delay:1.45s" filter="url(#tinyShadow)">
+          <ellipse cx="248" cy="135" rx="34" ry="46" transform="rotate(-34 248 135)" fill="#f5afc4" stroke="#dd8fab" stroke-width="2"/>
+          <ellipse cx="277" cy="128" rx="34" ry="47" transform="rotate(32 277 128)" fill="#f4a1b9" stroke="#dd8fab" stroke-width="2"/>
+          <ellipse cx="252" cy="107" rx="29" ry="37" transform="rotate(-9 252 107)" fill="url(#lightPink)" stroke="#e6a0b6" stroke-width="2"/>
+          <ellipse cx="235" cy="148" rx="29" ry="31" transform="rotate(-42 235 148)" fill="#ffc8d3" stroke="#e3a0b0" stroke-width="2"/>
+          <ellipse cx="279" cy="152" rx="28" ry="31" transform="rotate(40 279 152)" fill="url(#rosePetal)" stroke="#de90a8" stroke-width="2"/>
+          <path d="M239 157 C238 133 252 119 261 125 C276 118 287 144 272 160 Q258 174 239 157Z" fill="#f9dbe0" stroke="#e7a6b7" stroke-width="2"/>
+          <path d="M244 144 Q259 130 271 148 M246 155 Q259 164 272 147" fill="none" stroke="#d883a4" stroke-width="2.2" stroke-linecap="round"/>
+          <circle cx="258" cy="147" r="4" fill="#f5c779"/>
+          <circle cx="267" cy="144" r="3" fill="#f5c779"/>
+        </g>
+
+        <!-- Orta büyük şakayık -->
+        <g class="flower flower--peony-center" style="--delay:1.77s" filter="url(#tinyShadow)">
+          <ellipse cx="306" cy="192" rx="49" ry="62" transform="rotate(-48 306 192)" fill="#e995b1" stroke="#cc7898" stroke-width="2"/>
+          <ellipse cx="355" cy="188" rx="49" ry="65" transform="rotate(42 355 188)" fill="#eda2b9" stroke="#ce7997" stroke-width="2"/>
+          <ellipse cx="332" cy="156" rx="43" ry="59" fill="url(#rosePetal)" stroke="#d987a1" stroke-width="2"/>
+          <ellipse cx="290" cy="221" rx="43" ry="45" transform="rotate(-42 290 221)" fill="#ffc9d3" stroke="#df9fb2" stroke-width="2"/>
+          <ellipse cx="374" cy="220" rx="42" ry="46" transform="rotate(38 374 220)" fill="url(#roseDark)" stroke="#d88ba4" stroke-width="2"/>
+          <path d="M283 221 Q273 179 306 169 C309 138 357 145 359 172 C394 185 388 220 363 232 C337 256 303 250 283 221Z" fill="#f8b3c6" stroke="#da86a4" stroke-width="2"/>
+          <path d="M303 223 C294 199 309 181 333 185 Q363 179 369 204 C368 231 337 239 320 227Z" fill="#ffe4e5" stroke="#e9a9b7" stroke-width="2"/>
+          <path d="M306 201 Q321 188 337 197 Q349 204 337 219 Q323 228 314 215 Q316 203 328 206" fill="none" stroke="#cf819f" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="337" cy="208" r="4" fill="#f8cb83"/>
+          <circle cx="329" cy="213" r="3" fill="#f9cf90"/>
+          <circle cx="340" cy="215" r="2.6" fill="#f6bd70"/>
+        </g>
+
+        <!-- Sağ yukarı küçük lale -->
+        <g class="flower flower--tulip-right" style="--delay:2.02s" filter="url(#tinyShadow)">
+          <path d="M417 172 C390 165 385 135 397 113 Q416 127 417 172Z" fill="#ef9db5" stroke="#d884a3" stroke-width="2"/>
+          <path d="M417 172 C442 166 450 133 433 110 Q421 128 417 172Z" fill="#e7a5c3" stroke="#d486a8" stroke-width="2"/>
+          <path d="M417 173 C397 152 400 118 416 92 C436 116 437 152 417 173Z" fill="url(#lightPink)" stroke="#dc95b0" stroke-width="2"/>
+          <path d="M416 164 Q412 136 416 110" stroke="#fff3f3" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+        </g>
+
+        <!-- Beyaz lilyum -->
+        <g class="flower flower--lily" style="--delay:2.26s" filter="url(#tinyShadow)">
+          <path d="M506 227 Q475 186 491 137 Q516 151 519 220Z" fill="url(#lilyWhite)" stroke="#e7bdc9" stroke-width="2.5"/>
+          <path d="M519 219 Q528 164 567 144 Q574 186 530 231Z" fill="#fff8f5" stroke="#e7bdc9" stroke-width="2.5"/>
+          <path d="M529 226 Q572 193 604 212 Q588 241 535 240Z" fill="url(#lilyWhite)" stroke="#e7bdc9" stroke-width="2.5"/>
+          <path d="M534 241 Q577 251 572 292 Q535 292 519 253Z" fill="#fff9f6" stroke="#e7bdc9" stroke-width="2.5"/>
+          <path d="M513 252 Q484 292 453 274 Q460 242 503 233Z" fill="url(#lilyWhite)" stroke="#e7bdc9" stroke-width="2.5"/>
+          <path d="M504 232 Q461 228 449 195 Q487 183 516 222Z" fill="#fffaf8" stroke="#e7bdc9" stroke-width="2.5"/>
+          <path d="M515 232 Q506 196 505 165 M524 229 Q545 187 557 166 M530 237 Q565 224 584 222 M523 245 Q545 263 558 278 M509 244 Q487 262 468 268 M506 232 Q474 213 465 199" fill="none" stroke="#eeb0c1" stroke-width="2.5" stroke-linecap="round" opacity=".63"/>
+          <circle cx="518" cy="237" r="11" fill="#f9e9c2" stroke="#eacda4" stroke-width="2"/>
+          <g stroke="#bba278" stroke-width="2.5" stroke-linecap="round" fill="none">
+            <path d="M517 233 L505 211 M520 233 L529 209 M523 237 L547 226 M517 241 L512 260 M514 238 L494 247"/>
+          </g>
+          <g fill="#daae6c">
+            <ellipse cx="503" cy="208" rx="4.5" ry="6" transform="rotate(-28 503 208)"/>
+            <ellipse cx="530" cy="206" rx="4" ry="6" transform="rotate(20 530 206)"/>
+            <ellipse cx="550" cy="225" rx="6" ry="4" transform="rotate(-20 550 225)"/>
+            <ellipse cx="511" cy="263" rx="4.5" ry="6"/>
+            <ellipse cx="491" cy="248" rx="5.5" ry="4" transform="rotate(-25 491 248)"/>
+          </g>
+        </g>
+
+        <!-- Minik goncalar -->
+        <g class="flower flower--buds" style="--delay:2.52s">
+          <g transform="translate(115 207)">
+            <ellipse cy="-14" rx="16" ry="24" fill="#ffd3dc" stroke="#dc97ae" stroke-width="2"/>
+            <ellipse cx="-9" cy="-8" rx="12" ry="19" transform="rotate(-22 -9 -8)" fill="#f3afc4" stroke="#d996aa" stroke-width="1.5"/>
+            <ellipse cx="9" cy="-8" rx="12" ry="19" transform="rotate(22 9 -8)" fill="#f7bdd0" stroke="#da99b2" stroke-width="1.5"/>
+            <circle cy="-8" r="5" fill="#ffe9d1"/>
+          </g>
+          <g transform="translate(565 299)">
+            <ellipse rx="17" ry="23" cy="-14" fill="#fff0ed" stroke="#e6c3c8" stroke-width="2"/>
+            <ellipse rx="14" ry="19" cx="-8" cy="-10" transform="rotate(-28 -8 -10)" fill="#ffe1e6" stroke="#e6b7c6" stroke-width="1.5"/>
+            <ellipse rx="14" ry="19" cx="8" cy="-10" transform="rotate(28 8 -10)" fill="#ffefea" stroke="#eac5c9" stroke-width="1.5"/>
+            <circle cy="-10" r="4" fill="#f3c77f"/>
+          </g>
+        </g>
+
+        <!-- Buketin ön katı ve kurdelesi -->
+        <g class="wrap-front">
+          <path d="M238 411 Q344 454 461 411 L441 513 L348 550 L256 512 Z" fill="url(#paperFront)" stroke="#deabb9" stroke-width="2"/>
+          <path d="M238 411 L348 550 L257 512Z" fill="#fff0ed" opacity=".85"/>
+          <path d="M461 411 L348 550 L440 513Z" fill="#f2c3d2" opacity=".7"/>
+          <path d="M260 498 Q350 518 435 496" fill="none" stroke="#f9e9e5" stroke-width="2" stroke-dasharray="2 9"/>
+          <path d="M304 503 Q347 486 391 503" fill="none" stroke="#ba889e" stroke-width="9" stroke-linecap="round"/>
+          <path d="M344 497 C317 479 296 476 287 488 C290 504 313 510 344 499Z" fill="#e7a0b8" stroke="#bd7b97" stroke-width="2"/>
+          <path d="M349 498 C380 477 403 478 411 490 C404 505 380 507 349 501Z" fill="#f2b9c8" stroke="#bd7b97" stroke-width="2"/>
+          <path d="M344 503 L323 542 L345 531 L362 545 L355 505" fill="#df9fb8" stroke="#bc7d99" stroke-width="2"/>
+          <ellipse cx="347" cy="499" rx="10" ry="8" fill="#f5c7d2" stroke="#bb7b97" stroke-width="2"/>
+        </g>
+
+        <g class="doodle-dots" fill="#e2acba">
+          <circle cx="126" cy="139" r="4"/>
+          <circle cx="586" cy="127" r="3"/>
+          <circle cx="189" cy="120" r="2.5"/>
+          <circle cx="612" cy="311" r="3.5"/>
+          <circle cx="110" cy="314" r="2.5"/>
+          <circle cx="540" cy="386" r="2.5"/>
+        </g>
+      </svg>
+
+      <button class="envelope" id="openLetter" type="button" aria-label="Sana özel yazdığım notu aç" disabled>
+        <span class="envelope__floating-label">sana bir not bıraktım ♡</span>
+        <span class="envelope__paper">
+          <span>minik bir not</span>
+          <span class="envelope__little-heart">♡</span>
+        </span>
+        <span class="envelope__base">
+          <span class="envelope__fold"></span>
+          <span class="envelope__seal">♥</span>
+        </span>
+        <span class="envelope__hint">açmak için dokun</span>
+      </button>
+    </section>
+
+    <div class="bottom-line" aria-hidden="true">
+      <span></span>
+      <span>♡</span>
+      <span></span>
+    </div>
+
+    <p class="footer-note">Biraz kod, biraz çiçek, en çok da sen. <span>✿</span></p>
+
+    <button class="replay-button" id="replayBouquet" type="button" aria-label="Çiçeklerin açılışını yeniden izle">
+      ↻ çiçekleri yeniden açtır
+    </button>
+  </main>
+
+  <div class="letter-modal" id="letterModal" role="dialog" aria-modal="true" aria-labelledby="letterTitle" hidden>
+    <div class="letter-modal__backdrop" id="modalBackdrop"></div>
+
+    <div class="letter-card" role="document">
+      <button class="letter-card__close" id="closeLetter" type="button" aria-label="Notu kapat">×</button>
+      <span class="letter-card__stamp">29 · 10</span>
+      <span class="letter-card__flower" aria-hidden="true">✿</span>
+
+      <p class="letter-card__eyebrow" id="letterTitle">Seni çok seviyorum balım ❤️</p>
+
+      <div class="letter-card__divider"></div>
+
+      <p class="letter-card__message">
+        29 ekimde<br>
+        kalbimin orta yerinde<br>
+        <em>bu nasıl bi cumhuriyet</em>
+      </p>
+
+      <div class="letter-card__hearts" aria-label="İki kalp">❤️ ❤️</div>
+      <p class="letter-card__signature">iyi ki varsın, güzelim.</p>
+      <div class="letter-card__corner-flower" aria-hidden="true">✿</div>
+    </div>
+  </div>
+
+  <div class="floating-hearts" id="floatingHearts" aria-hidden="true"></div>
+</body>
+</html>
